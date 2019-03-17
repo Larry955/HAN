@@ -1,7 +1,7 @@
 # HAN
 This is an elegant implementation of HAN for Sentiment Classification Task.
 
-The original paper is [Hierarchical Attention Networks for Document Classificatio](https://www.cs.cmu.edu/~hovy/papers/16HLT-hierarchical-attention-networks.pdf)
+The original paper is [Hierarchical Attention Networks for Document Classification](https://www.cs.cmu.edu/~hovy/papers/16HLT-hierarchical-attention-networks.pdf)
 
 The core codes are from this repo: [textClassifierHATT](https://github.com/richliao/textClassifier/blob/master/textClassifierHATT.py), 
 I refactor the original code to make it easier to understand.
