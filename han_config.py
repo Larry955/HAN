@@ -1,3 +1,5 @@
+# Edit your own configuration here
+
 MAX_SENT_LENGTH = 150   # Max number of words per sentence
 MAX_SENTS = 18  # Max number of sentences per document
 MAX_NB_WORDS = 20000    # Max number of words in total
