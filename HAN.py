@@ -279,7 +279,7 @@ if __name__ == '__main__':
     else:
         data, labels, word_index = process_data(data_path)
         with open(pickle_path, 'wb') as f:
-            pickle.dump((data, labels, word_index), f)
+            pickle.dump((data, labels, word_index), f, protocol=4)
         f.close()
     # Generate data for training, validation and test
     x_train, x_test, y_train, y_test = train_test_split(data, labels, test_size=0.1, random_state=1)

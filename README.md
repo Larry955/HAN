@@ -64,7 +64,7 @@ python HAN.py -d=train_data.tsv -s=GoogleNews-vectors-negative300.bin --epoch=20
 ```
 """
 This means:
-You have alreay trained your data before, and you will get your training data from pickle file(processed_data.pickle in this case)
+You have alreay trained your data, and you will get your training data from pickle file(processed_data.pickle in this case)
 Moreover, you have saved the model you trained, and you will load your model from a *h5 file(model.h5 in this case)
 """
 python HAN.py --training_data_ready --model_ready
