@@ -15,10 +15,10 @@ from nltk import tokenize
 parser = argparse.ArgumentParser('HAN')
 
 parser.add_argument('--full_data_path', '-d', help='Full path of data', default=FULL_DATA_PATH)
-parser.add_argument('--processed_pickle_data_path', '-D', help='Full path of processed pickle data',
-                    default=PROCESSED_PICKLE_DATA_PATH)
 parser.add_argument('--embedding_path', '-s', help='The pre-trained embedding vector', default=EMBEDDING_PATH)
-parser.add_argument('--model_path', '-m', help='Full path of model', default=MODEL_PATH)
+# parser.add_argument('--processed_pickle_data_path', '-D', help='Full path of processed pickle data',
+#                     default=PROCESSED_PICKLE_DATA_PATH)
+# parser.add_argument('--model_path', '-m', help='Full path of model', default=MODEL_PATH)
 parser.add_argument('--epoch', '-e', help='Epochs', type=int, default=EPOCH)
 parser.add_argument('--batch_size', '-b', help='Batch size', type=int, default=BATCH)
 parser.add_argument('--training_data_ready', '-t', help='Pass when training data is ready', action='store_true')
@@ -34,10 +34,16 @@ args = parser.parse_args()
 batch_size = args.batch_size
 epochs = args.epoch
 
-data_path = args.full_data_path
-pickle_path = args.processed_pickle_data_path
-model_path = args.model_path
 embedding_path = args.embedding_path
+data_path = args.full_data_path
+data_file_name = data_path.split('/')[-1]
+
+pickle_path = ""
+model_path = ""
+if data_file_name.find(".tsv") != -1:
+    pickle_path = data_file_name.replace(".tsv", ".pickle")
+    model_path = data_file_name.replace(".tsv", "_model.h5")
+assert (pickle_path != "" and model_path != "")
 
 is_training_data_ready = args.training_data_ready
 is_model_ready = args.model_ready
@@ -291,7 +297,6 @@ if __name__ == '__main__':
         # print('model ready')
         model = load_model(model_path, custom_objects={'AttLayer': AttLayer})
     else:
-
         # Generate embedding matrix consists of embedding vector
         embedding_matrix = create_emb_mat(embedding_path, word_index, embedding_dim)
 

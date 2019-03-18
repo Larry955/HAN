@@ -10,6 +10,6 @@ FULL_DATA_PATH = "F:/1Study information/Scut/Papers/experiments/datasets/imdb_2c
 EMBEDDING_PATH = "F:/1Study information/Scut/Papers/experiments/datasets/glove.6B.100d.txt"
                 # "F:/1Study information/Scut/Papers/experiments/datasets/GoogleNews-vectors-negative300.bin"
 
-MODEL_PATH = 'model.h5'
-PROCESSED_PICKLE_DATA_PATH = 'processed_data.pickle'
+# MODEL_PATH = 'model.h5'
+# PROCESSED_PICKLE_DATA_PATH = 'processed_data.pickle'
 
