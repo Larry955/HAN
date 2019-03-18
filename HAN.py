@@ -27,7 +27,7 @@ parser.add_argument('--verbosity', '-v', help='verbosity, stackable. 0: Error, 1
                     action='count')
 
 parser.description = 'Implementation of HAN for Sentiment Classification task'
-parser.epilog = "Larry King@https://github.com/Larry955"
+parser.epilog = "Larry King@https://github.com/Larry955/HAN"
 
 args = parser.parse_args()
 
@@ -266,7 +266,7 @@ def create_model(emb_matrix):
                   metrics=['acc'])
     model.summary()
     model.fit(x_train, y_train, validation_data=(x_val, y_val),
-              epochs=10, batch_size=50,
+              epochs=epochs, batch_size=batch_size,
               callbacks=[save_best_model, early_stopping])
     return model
 
