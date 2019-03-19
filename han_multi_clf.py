@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
 import re
-from bs4 import BeautifulSoup
 import argparse
 import os
 import pickle
@@ -133,8 +132,7 @@ def process_data(path):
     texts = []
     for idx in range(data_train.review.shape[0]):
     # for idx in range(100):
-        text = BeautifulSoup(data_train.review[idx])
-        text = clean_str(text.get_text())
+        text = clean_str(data_train.review[idx])
         texts.append(text)
         sentences = tokenize.sent_tokenize(text)
         reviews.append(sentences)
