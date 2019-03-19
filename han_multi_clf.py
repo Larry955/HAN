@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import re
+from bs4 import BeautifulSoup
 import argparse
 import os
 import pickle
@@ -93,29 +94,33 @@ early_stopping = EarlyStopping(monitor='val_loss', patience=4, verbose=0)
 save_best_model = ModelCheckpoint(filepath="checkpoints/checkpoint-{epoch:02d}e-val_loss{val_loss:.2f}.hdf5",
                                   monitor ='val_loss', verbose=0, save_best_only = False, save_weights_only = True)
 
+"""
+Tokenization/string cleaning for dataset
+Every dataset is lower cased except
+"""
 def clean_str(string):
-    """
-    Tokenization/string cleaning for dataset
-    Every dataset is lower cased except
-    """
-    string = re.sub(r"[^A-Za-z0-9(),.!?\'\`]", " ", string)
-    string = re.sub(r"\'s", " \'s", string)
-    string = re.sub(r"\'ve", " \'ve", string)
-    #string = re.sub(r"n\'t", " n\'t", string)
-    #string = re.sub(r"\'re", " \'re", string)
-    #string = re.sub(r"\'d", " \'d", string)
-    #string = re.sub(r"\'ll", " \'ll", string)
-    #string = re.sub(r",", " , ", string)
-    #string = re.sub(r"!", " ! ", string)
-    #string = re.sub(r"\(", " \( ", string)
-    string = re.sub(r"\)", " \) ", string)
-    string = re.sub(r"\?", " \? ", string)
-    string = re.sub(r"\s{2,}", " ", string)
-    string = re.sub(r"\\", "", string)
-    string = re.sub(r"\'", "", string)
-    string = re.sub(r"\"", "", string)
+    try:
+        string = re.sub(r"[^A-Za-z0-9(),.!?\'\`]", " ", string)
+        string = re.sub(r"\'s", " \'s", string)
+        string = re.sub(r"\'ve", " \'ve", string)
+        string = re.sub(r"n\'t", " n\'t", string)
+        string = re.sub(r"\'re", " \'re", string)
+        string = re.sub(r"\'d", " \'d", string)
+        string = re.sub(r"\'ll", " \'ll", string)
+        string = re.sub(r",", " , ", string)
+        string = re.sub(r"!", " ! ", string)
+        string = re.sub(r"\(", " \( ", string)
+        string = re.sub(r"\)", " \) ", string)
+        string = re.sub(r"\?", " \? ", string)
+        string = re.sub(r"\s{2,}", " ", string)
+        string = re.sub(r"\\", "", string)
+        string = re.sub(r"\'", "", string)
+        string = re.sub(r"\"", "", string)
+    except Exception as e:
+        print(type(string))
+        print(string)
+        print(e)
     return string.strip().lower()
-
 
 """
 Process data(tsv format)
@@ -132,11 +137,14 @@ def process_data(path):
     texts = []
     for idx in range(data_train.review.shape[0]):
     # for idx in range(100):
-        text = clean_str(data_train.review[idx])
-        texts.append(text)
-        sentences = tokenize.sent_tokenize(text)
-        reviews.append(sentences)
-        labels.append(int(data_train.sentiment[idx]))
+    #     print('type data_train.review[idx]: ', type(data_train.review[idx]))
+        raw_text = data_train.review[idx]
+        if type(raw_text) == str and raw_text != '' and raw_text is not None:
+            text = clean_str(raw_text)
+            texts.append(text)
+            sentences = tokenize.sent_tokenize(text)
+            reviews.append(sentences)
+            labels.append(int(data_train.sentiment[idx]))
 
     #Input shape would be [of reviews each batch,of sentences , of words in each sentences]
     tokenizer = Tokenizer(num_words=MAX_NB_WORDS)
