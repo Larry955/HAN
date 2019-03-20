@@ -157,7 +157,7 @@ def process_data(path):
 
     word_index = tokenizer.word_index
     labels = to_categorical(np.asarray(labels))
-    return data,labels,word_index
+    return data, labels, word_index
 
 """
 1. Read word vector from pre-trained file
