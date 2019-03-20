@@ -15,14 +15,14 @@ from nltk import tokenize
 parser = argparse.ArgumentParser('HAN')
 
 parser.add_argument('--full_data_path', '-d', help='Full path of data', default=FULL_DATA_PATH)
-parser.add_argument('--embedding_path', '-s', help='The pre-trained embedding vector', default=EMBEDDING_PATH)
-# parser.add_argument('--processed_pickle_data_path', '-D', help='Full path of processed pickle data',
-#                     default=PROCESSED_PICKLE_DATA_PATH)
-# parser.add_argument('--model_path', '-m', help='Full path of model', default=MODEL_PATH)
-parser.add_argument('--epoch', '-e', help='Epochs', type=int, default=EPOCH)
+parser.add_argument('--embedding_path', '-e', help='The pre-trained embedding vector', default=EMBEDDING_PATH)
+parser.add_argument('--pickle_data_path', '-p', help='Full path of processed pickle data',
+                    default=PROCESSED_PICKLE_DATA_PATH)
+parser.add_argument('--model_path', '-M', help='Full path of model', default=MODEL_PATH)
+parser.add_argument('--epoch', '-E', help='Epochs', type=int, default=EPOCH)
 parser.add_argument('--batch_size', '-b', help='Batch size', type=int, default=BATCH)
 parser.add_argument('--training_data_ready', '-t', help='Pass when training data is ready', action='store_true')
-parser.add_argument('--model_ready', '-M', help='Pass when model is ready', action='store_true')
+parser.add_argument('--model_ready', '-m', help='Pass when model is ready', action='store_true')
 parser.add_argument('--verbosity', '-v', help='verbosity, stackable. 0: Error, 1: Warning, 2: Info, 3: Debug',
                     action='count')
 
@@ -34,16 +34,9 @@ args = parser.parse_args()
 batch_size = args.batch_size
 epochs = args.epoch
 
-
 data_path = args.full_data_path
-data_file_name = data_path.split('/')[-1]
-
-pickle_path = ""
-model_path = ""
-if data_file_name.find(".tsv") != -1:
-    pickle_path = data_file_name.replace(".tsv", ".pickle")
-    model_path = data_file_name.replace(".tsv", "_model.h5")
-assert (pickle_path != "" and model_path != "")
+pickle_path = args.pickle_data_path
+model_path = args.model_path
 
 is_training_data_ready = args.training_data_ready
 is_model_ready = args.model_ready
@@ -91,7 +84,7 @@ session = tf.Session(config=config)
 # Stop training if val_loss keep decreasing for 4 epochs
 early_stopping = EarlyStopping(monitor='val_loss', patience=4, verbose=0)
 # Save the best model
-save_best_model = ModelCheckpoint(filepath="checkpoints/checkpoint-{epoch:02d}e-val_loss{val_loss:.2f}.hdf5",
+save_best_model = ModelCheckpoint(filepath="checkpoints/{epoch:02d}e-val_loss{val_loss:.2f}-val_acc{val_acc:.2f}.hdf5",
                                   monitor ='val_loss', verbose=0, save_best_only = False, save_weights_only = True)
 
 """
@@ -276,14 +269,11 @@ def create_model(emb_matrix):
     # print('pred.shape: ', preds.shape)
 
     model = Model(review_input, preds)
+    return model
 
-    model.compile(loss='categorical_crossentropy',
-                  optimizer='rmsprop',
-                  metrics=['acc'])
-    model.summary()
-    model.fit(x_train, y_train, validation_data=(x_val, y_val),
-              epochs=epochs, batch_size=batch_size,
-              callbacks=[save_best_model, early_stopping])
+def load_trained_model(weights_path, emb_matrix):
+    model = create_model(emb_matrix)
+    model.load_weights(weights_path)
     return model
 
 if __name__ == '__main__':
@@ -293,8 +283,13 @@ if __name__ == '__main__':
             data, labels, word_index = pickle.load(f)
         f.close()
     else:
+        data_file_name = data_path.split('/')[-1]
+        pickle_saved_path = ""
+        if data_file_name.find(".tsv") != -1:
+            pickle_saved_path = data_file_name.replace(".tsv", ".pickle")
+            assert (pickle_saved_path != "")
         data, labels, word_index = process_data(data_path)
-        with open(pickle_path, 'wb') as f:
+        with open(pickle_saved_path, 'wb') as f:
             pickle.dump((data, labels, word_index), f, protocol=4)
         f.close()
     # Generate data for training, validation and test
@@ -305,14 +300,32 @@ if __name__ == '__main__':
 
     if is_model_ready:
         # print('model ready')
-        model = load_model(model_path, custom_objects={'AttLayer': AttLayer})
+        # model = load_model(model_path, custom_objects={'AttLayer': AttLayer}) # load h5 model
+        embedding_matrix = create_emb_mat(embedding_path, word_index, embedding_dim)
+        model = load_trained_model(model_path, embedding_matrix)  # load hdf5
+        model.compile(loss='categorical_crossentropy',
+                      optimizer='rmsprop',
+                      metrics=['acc'])
+        model.summary()
     else:
+        data_file_name = data_path.split('/')[-1]
+        model_saved_path = ""
+        if data_file_name.find(".tsv") != -1:
+            model_saved_path = data_file_name.replace(".tsv", "_model.h5")
+            assert (model_saved_path != "")
         # Generate embedding matrix consists of embedding vector
         embedding_matrix = create_emb_mat(embedding_path, word_index, embedding_dim)
 
         # Create model for training
         model = create_model(embedding_matrix)
-        model.save(model_path)
+        model.compile(loss='categorical_crossentropy',
+                      optimizer='rmsprop',
+                      metrics=['acc'])
+        model.summary()
+        model.fit(x_train, y_train, validation_data=(x_val, y_val),
+                  epochs=epochs, batch_size=batch_size,
+                    callbacks=[save_best_model, early_stopping])
+        model.save(model_saved_path)
 
     print("Evaluating...")
     score = model.evaluate(x_test, y_test,
