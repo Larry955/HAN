@@ -143,6 +143,10 @@ def process_data(path):
     tokenizer = Tokenizer(num_words=MAX_NB_WORDS)
     tokenizer.fit_on_texts(texts)
     print('The len of texts: ',len(texts))
+
+    '''
+    data: 三维，分别是数据量大小，每个文档的最大句子数，每个句子的最大单词数
+    '''
     data = np.zeros((len(texts), MAX_SENTS, MAX_SENT_LENGTH), dtype='int16')
 
     for i, sentences in enumerate(reviews):
