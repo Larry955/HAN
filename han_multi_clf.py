@@ -140,6 +140,16 @@ def process_data(path):
             labels.append(int(data_train.sentiment[idx]))
 
     #Input shape would be [of reviews each batch,of sentences , of words in each sentences]
+    """
+    consider the sentence " The earth is an awesome place live"
+    
+    tokenizer.fit_on_texts("The earth is an awesome place live") 
+    fits [[1,2,3,4,5,6,7]] where 3 -> "is" , 6 -> "place", so on.
+    
+    sequences = tokenizer.texts_to_sequences("The earth is an great place live")
+    returns [[1,2,3,4,6,7]].
+    
+    """
     tokenizer = Tokenizer(num_words=MAX_NB_WORDS)
     tokenizer.fit_on_texts(texts)
     print('The len of texts: ',len(texts))
