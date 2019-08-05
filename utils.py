@@ -3,6 +3,7 @@ from sklearn.model_selection import train_test_split
 import re
 from nltk import sent_tokenize
 import os
+import platform
 import numpy as np
 
 from keras.preprocessing.text import Tokenizer, text_to_word_sequence
@@ -92,6 +93,9 @@ class DataUtil:
 
 
 if __name__ == '__main__':
-	dd = DataUtil("F:/1Study information/Scut/Papers/experiments/datasets/imdb_2class_train_data.tsv")
+	if platform.system() == 'Windows':
+		dd = DataUtil("F:/1Study information/Scut/Papers/experiments/datasets/imdb_2class_train_data.tsv")
+	elif platform.system() == 'Linux':
+		dd = DataUtil("/home/zll/dataset/yelp13_33w_5_cls.tsv")
 	hie_data, labels, word_index = dd.get_hie_3d_data()
 	doc_data, labels, word_index = dd.get_doc_2d_data()
