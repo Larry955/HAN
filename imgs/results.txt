@@ -1,0 +1,8 @@
+数据集			词嵌入		实验结果
+yelp13_5cls.tsv		glove300d	0.6645
+yelp14_5cls.tsv		glove300d	0.6866
+
+imdb_2cls.tsv		glove100d	0.9058
+imdb_2cls.tsv		glove200d	0.9124
+imdb_2cls.tsv		glove300d	0.9178
+imdb_2cls.tsv		Google300d	0.9164
