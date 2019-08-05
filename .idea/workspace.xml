@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="df22db3f-acb1-467b-8163-d75e8ea62191" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/HAN.py" afterPath="$PROJECT_DIR$/HAN.py" />
+      <change beforePath="$PROJECT_DIR$/han_multi_clf.py" afterPath="$PROJECT_DIR$/han_multi_clf.py" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,43 +14,35 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/HAN$HAN.coverage" NAME="HAN Coverage Results" MODIFIED="1552640057038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/HAN$HAN.coverage" NAME="HAN Coverage Results" MODIFIED="1552901071743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/lstm$BGRU_new.coverage" NAME="BGRU_new Coverage Results" MODIFIED="1552448024503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/lstm$BGRU_orig.coverage" NAME="BGRU_orig Coverage Results" MODIFIED="1552437171567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/HAN$han_multi_clf.coverage" NAME="han_multi_clf Coverage Results" MODIFIED="1564645997262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/lstm$keras_binary_class.coverage" NAME="keras_binary_class Coverage Results" MODIFIED="1552444831103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="HAN.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HAN.py">
+      <file leaf-file-name="han_binary_clf.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/han_binary_clf.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="284" column="42" lean-forward="true" selection-start-line="284" selection-start-column="42" selection-end-line="284" selection-end-column="42" />
+            <state relative-caret-position="3276">
+              <caret line="138" column="0" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="147" selection-end-column="7" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-                <element signature="e#3389#4230#0" expanded="false" />
-                <element signature="e#4444#5756#0" expanded="false" />
-                <element signature="e#5931#6968#0" expanded="false" />
-                <element signature="e#7039#8721#0" expanded="false" />
-                <element signature="e#7295#7635#0" expanded="false" />
-                <element signature="e#7692#7703#0" expanded="false" />
-                <element signature="e#7747#8391#0" expanded="false" />
-                <element signature="e#8450#8490#0" expanded="false" />
-                <element signature="e#8810#10152#0" expanded="false" />
+                <element signature="e#3607#4448#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-                <folding />
-              </first_editor>
-              <second_editor />
+      <file leaf-file-name="han_multi_clf.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/han_multi_clf.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="980">
+              <caret line="329" column="6" lean-forward="false" selection-start-line="329" selection-start-column="6" selection-end-line="329" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,8 +50,8 @@
       <file leaf-file-name="han_config.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/han_config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+            <state relative-caret-position="168">
+              <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -76,19 +68,26 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>batch_size</find>
       <find>Merge</find>
       <find>EMBEDDING_DIM</find>
-      <find>x_train</find>
       <find>Dense</find>
-      <find>data_path</find>
       <find>config</find>
       <find>PreProcess</find>
       <find>emb_file_flag</find>
+      <find>epochs</find>
+      <find>batch_size</find>
+      <find>data_path</find>
+      <find>pickle_path</find>
+      <find>x_train</find>
+      <find>rate</find>
+      <find>processed_pickle_data_path</find>
+      <find>embedding_dim</find>
+      <find>text_to_word_sequence</find>
     </findStrings>
     <replaceStrings>
       <replace>embedding_dim</replace>
       <replace>process_data</replace>
+      <replace>pickle_data_path</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -112,10 +111,15 @@
         <option value="$PROJECT_DIR$/keras_binary_class.py" />
         <option value="$PROJECT_DIR$/BGRU_new.py" />
         <option value="$PROJECT_DIR$/HAN_config.py" />
-        <option value="$PROJECT_DIR$/han_config.py" />
         <option value="$PROJECT_DIR$/sentiment_lstm.py" />
         <option value="$PROJECT_DIR$/BGRU_orig.py" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/HAN.py" />
+        <option value="$PROJECT_DIR$/module_test.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/han_config.py" />
+        <option value="$PROJECT_DIR$/han_binary_clf.py" />
+        <option value="$PROJECT_DIR$/han_multi_clf.py" />
       </list>
     </option>
   </component>
@@ -131,9 +135,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="151" />
-    <option name="y" value="40" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="2096" />
+    <option name="y" value="-26" />
     <option name="width" value="1400" />
     <option name="height" value="992" />
   </component>
@@ -172,8 +176,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -186,17 +191,18 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://F:/1Study information/Scut/Papers/experiments/HAN/han_binary_clf.py" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\1Study information\Scut\Papers\experiments\HAN" />
       <recent name="F:\1Study information\Scut\Papers\experiments\lstm" />
     </key>
   </component>
@@ -212,7 +218,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.HAN">
+  <component name="RunManager" selected="Python.han_multi_clf">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -325,26 +331,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="lstm" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="F:\1Study information\Scut\Papers\experiments\HAN\HAN.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="BGRU_orig" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="lstm" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BGRU_orig.py" />
+      <option name="SCRIPT_NAME" value="F:\1Study information\Scut\Papers\experiments\HAN\han_binary_clf.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -364,7 +351,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="HAN" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HAN.py" />
+      <option name="SCRIPT_NAME" value="F:\1Study information\Scut\Papers\experiments\HAN\han_binary_clf.py" />
       <option name="PARAMETERS" value="--training_data_ready --model_ready" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -389,7 +376,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="keras_binary_class" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="han_multi_clf" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -401,15 +388,15 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="lstm" />
+      <module name="HAN" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/keras_binary_class.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/han_multi_clf.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="sentiment_lstm" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="module_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -421,9 +408,29 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="lstm" />
+      <module name="HAN" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sentiment_lstm.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/module_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="PYDEVD_LOAD_VALUES_ASYNC" value="True" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="HAN" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -480,25 +487,6 @@
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="lstm" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
     </configuration>
     <configuration default="true" type="tests" factoryName="Nosetests">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -562,20 +550,39 @@
       <option name="_new_target" value="&quot;&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lstm" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.sentiment_lstm" />
-      <item index="1" class="java.lang.String" itemvalue="Python.BGRU_new" />
-      <item index="2" class="java.lang.String" itemvalue="Python.BGRU_orig" />
-      <item index="3" class="java.lang.String" itemvalue="Python.keras_binary_class" />
-      <item index="4" class="java.lang.String" itemvalue="Python.HAN" />
+      <item index="0" class="java.lang.String" itemvalue="Python.BGRU_new" />
+      <item index="1" class="java.lang.String" itemvalue="Python.HAN" />
+      <item index="2" class="java.lang.String" itemvalue="Python.test" />
+      <item index="3" class="java.lang.String" itemvalue="Python.module_test" />
+      <item index="4" class="java.lang.String" itemvalue="Python.han_multi_clf" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.HAN" />
-        <item index="1" class="java.lang.String" itemvalue="Python.BGRU_new" />
-        <item index="2" class="java.lang.String" itemvalue="Python.keras_binary_class" />
-        <item index="3" class="java.lang.String" itemvalue="Python.BGRU_orig" />
-        <item index="4" class="java.lang.String" itemvalue="Python.sentiment_lstm" />
+        <item index="0" class="java.lang.String" itemvalue="Python.han_multi_clf" />
+        <item index="1" class="java.lang.String" itemvalue="Python.module_test" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test" />
+        <item index="3" class="java.lang.String" itemvalue="Python.HAN" />
+        <item index="4" class="java.lang.String" itemvalue="Python.BGRU_new" />
       </list>
     </recent_temporary>
   </component>
@@ -606,7 +613,18 @@
       <workItem from="1552808826848" duration="4858000" />
       <workItem from="1552821727709" duration="826000" />
       <workItem from="1552823026073" duration="2540000" />
-      <workItem from="1552872661546" duration="1120000" />
+      <workItem from="1552872661546" duration="1907000" />
+      <workItem from="1552899381110" duration="7512000" />
+      <workItem from="1552916422912" duration="745000" />
+      <workItem from="1552962125014" duration="8037000" />
+      <workItem from="1553048200745" duration="9767000" />
+      <workItem from="1553086137661" duration="40000" />
+      <workItem from="1553152972522" duration="3245000" />
+      <workItem from="1553222503546" duration="631000" />
+      <workItem from="1554866007449" duration="55000" />
+      <workItem from="1564643285580" duration="6711000" />
+      <workItem from="1564735612127" duration="2199000" />
+      <workItem from="1564989378391" duration="81000" />
     </task>
     <task id="LOCAL-00001" summary="add HAN.py">
       <created>1552823236617</created>
@@ -615,30 +633,42 @@
       <option name="project" value="LOCAL" />
       <updated>1552823236617</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add HAN.py">
+      <created>1564645629966</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1564645629966</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add HAN.py">
+      <created>1564645737202</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1564645737202</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83994000" />
+    <option name="totallyTimeSpent" value="123804000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
-    <editor active="true" />
+    <frame x="1920" y="0" width="1360" height="768" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4828326" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="1462" y="108" width="434" height="850" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1856492" sideWeight="0.50214595" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3447099" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3382688" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32838038" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34396356" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25938568" sideWeight="0.49785408" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1416309" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24309815" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -646,12 +676,13 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3526735" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16201717" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="1462" y="108" width="434" height="850" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -670,9 +701,19 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/HAN.py</url>
-          <line>289</line>
-          <option name="timeStamp" value="32" />
+          <url>file://$PROJECT_DIR$/han_multi_clf.py</url>
+          <line>152</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/han_multi_clf.py</url>
+          <line>174</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/han_multi_clf.py</url>
+          <line>273</line>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -682,65 +723,22 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="34" />
+      <option name="time" value="45" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="data.__internals__" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/han_config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="7" column="90" lean-forward="false" selection-start-line="7" selection-start-column="73" selection-end-line="7" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BGRU_orig.py" />
-    <entry file="file://$PROJECT_DIR$/HAN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3164">
-          <caret line="270" column="16" lean-forward="true" selection-start-line="110" selection-start-column="0" selection-end-line="270" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#3389#4230#0" expanded="false" />
-            <element signature="e#4444#5756#0" expanded="false" />
-            <element signature="e#5931#6968#0" expanded="false" />
-            <element signature="e#7039#8721#0" expanded="false" />
-            <element signature="e#7295#7635#0" expanded="false" />
-            <element signature="e#7692#7703#0" expanded="false" />
-            <element signature="e#7747#8391#0" expanded="false" />
-            <element signature="e#8450#8490#0" expanded="false" />
-            <element signature="e#8810#10152#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/defaults.py" />
-    <entry file="file://$PROJECT_DIR$/sentiment_lstm.py" />
-    <entry file="file://$PROJECT_DIR$/han_config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BGRU_orig.py" />
-    <entry file="file://$PROJECT_DIR$/HAN.py">
+    <entry file="file://$PROJECT_DIR$/han_binary_clf.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4116">
           <caret line="304" column="31" lean-forward="true" selection-start-line="304" selection-start-column="31" selection-end-line="304" selection-end-column="31" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#3389#4230#0" expanded="false" />
-            <element signature="e#4444#5756#0" expanded="false" />
-            <element signature="e#5931#6968#0" expanded="false" />
-            <element signature="e#7039#8721#0" expanded="false" />
-            <element signature="e#7295#7635#0" expanded="false" />
-            <element signature="e#7692#7703#0" expanded="false" />
-            <element signature="e#7747#8391#0" expanded="false" />
-            <element signature="e#8450#8490#0" expanded="false" />
-            <element signature="e#8810#10152#0" expanded="false" />
+            <element signature="e#3607#4448#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -757,21 +755,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/keras_binary_class.py" />
     <entry file="file://$PROJECT_DIR$/BGRU_orig.py" />
-    <entry file="file://$PROJECT_DIR$/HAN.py">
+    <entry file="file://$PROJECT_DIR$/han_binary_clf.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8344">
           <caret line="298" column="18" lean-forward="false" selection-start-line="298" selection-start-column="8" selection-end-line="298" selection-end-column="18" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#3389#4230#0" expanded="false" />
-            <element signature="e#4444#5756#0" expanded="false" />
-            <element signature="e#5931#6968#0" expanded="false" />
-            <element signature="e#7039#8721#0" expanded="false" />
-            <element signature="e#7295#7635#0" expanded="false" />
-            <element signature="e#7692#7703#0" expanded="false" />
-            <element signature="e#7747#8391#0" expanded="false" />
-            <element signature="e#8450#8490#0" expanded="false" />
-            <element signature="e#8810#10152#0" expanded="false" />
+            <element signature="e#3607#4448#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -780,21 +770,13 @@
     <entry file="file://$PROJECT_DIR$/sentiment_lstm.py" />
     <entry file="file://$PROJECT_DIR$/keras_binary_class.py" />
     <entry file="file://$PROJECT_DIR$/BGRU_orig.py" />
-    <entry file="file://$PROJECT_DIR$/HAN.py">
+    <entry file="file://$PROJECT_DIR$/han_binary_clf.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3836">
           <caret line="256" column="0" lean-forward="true" selection-start-line="256" selection-start-column="0" selection-end-line="256" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#3389#4230#0" expanded="false" />
-            <element signature="e#4444#5756#0" expanded="false" />
-            <element signature="e#5931#6968#0" expanded="false" />
-            <element signature="e#7039#8721#0" expanded="false" />
-            <element signature="e#7295#7635#0" expanded="false" />
-            <element signature="e#7692#7703#0" expanded="false" />
-            <element signature="e#7747#8391#0" expanded="false" />
-            <element signature="e#8450#8490#0" expanded="false" />
-            <element signature="e#8810#10152#0" expanded="false" />
+            <element signature="e#3607#4448#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -811,21 +793,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HAN.py">
+    <entry file="file://$PROJECT_DIR$/han_binary_clf.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1428">
           <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#3389#4230#0" expanded="false" />
-            <element signature="e#4444#5756#0" expanded="false" />
-            <element signature="e#5931#6968#0" expanded="false" />
-            <element signature="e#7039#8721#0" expanded="false" />
-            <element signature="e#7295#7635#0" expanded="false" />
-            <element signature="e#7692#7703#0" expanded="false" />
-            <element signature="e#7747#8391#0" expanded="false" />
-            <element signature="e#8450#8490#0" expanded="false" />
-            <element signature="e#8810#10152#0" expanded="false" />
+            <element signature="e#3607#4448#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -842,21 +816,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HAN.py">
+    <entry file="file://$PROJECT_DIR$/han_binary_clf.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1428">
           <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#3389#4230#0" expanded="false" />
-            <element signature="e#4444#5756#0" expanded="false" />
-            <element signature="e#5931#6968#0" expanded="false" />
-            <element signature="e#7039#8721#0" expanded="false" />
-            <element signature="e#7295#7635#0" expanded="false" />
-            <element signature="e#7692#7703#0" expanded="false" />
-            <element signature="e#7747#8391#0" expanded="false" />
-            <element signature="e#8450#8490#0" expanded="false" />
-            <element signature="e#8810#10152#0" expanded="false" />
+            <element signature="e#3607#4448#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -873,21 +839,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HAN.py">
+    <entry file="file://$PROJECT_DIR$/han_binary_clf.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1176">
           <caret line="42" column="47" lean-forward="false" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#3389#4230#0" expanded="false" />
-            <element signature="e#4444#5756#0" expanded="false" />
-            <element signature="e#5931#6968#0" expanded="false" />
-            <element signature="e#7039#8721#0" expanded="false" />
-            <element signature="e#7295#7635#0" expanded="false" />
-            <element signature="e#7692#7703#0" expanded="false" />
-            <element signature="e#7747#8391#0" expanded="false" />
-            <element signature="e#8450#8490#0" expanded="false" />
-            <element signature="e#8810#10152#0" expanded="false" />
+            <element signature="e#3607#4448#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -914,22 +872,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exp_imgs/BGRU_glove_100dim.png" />
-    <entry file="file://F:/Applications/Python3.6.8/Lib/site-packages/keras/engine/base_layer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="21" column="6" lean-forward="false" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-          <folding>
-            <element signature="e#3579#6173#0" expanded="false" />
-            <element signature="e#6239#6643#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://F:/Applications/Python3.6.8/Lib/site-packages/keras/engine/saving.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="387" column="4" lean-forward="false" selection-start-line="387" selection-start-column="4" selection-end-line="387" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -947,37 +893,79 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-            <folding />
+          <first_editor relative-caret-position="28">
+            <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/han_config.py">
+    <entry file="file://$PROJECT_DIR$/module_test.py" />
+    <entry file="file://$PROJECT_DIR$/test.py" />
+    <entry file="file://F:/Applications/Python3.6.8/Lib/site-packages/pandas/core/generic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        <state relative-caret-position="319">
+          <caret line="5065" column="0" lean-forward="false" selection-start-line="5065" selection-start-column="0" selection-end-line="5065" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Applications/Python3.6.8/Lib/site-packages/pandas/core/series.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="881" column="0" lean-forward="false" selection-start-line="881" selection-start-column="0" selection-end-line="881" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Applications/Python3.6.8/Lib/site-packages/keras/engine/base_layer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="1069" column="8" lean-forward="false" selection-start-line="1069" selection-start-column="8" selection-end-line="1069" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HAN.py">
+    <entry file="file://F:/Applications/Python3.6.8/Lib/site-packages/keras/legacy/interfaces.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="284" column="42" lean-forward="true" selection-start-line="284" selection-start-column="42" selection-end-line="284" selection-end-column="42" />
+        <state relative-caret-position="176">
+          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Applications/Python3.6.8/Lib/site-packages/keras/preprocessing/text.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="e#47#85#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/han_binary_clf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3276">
+          <caret line="138" column="0" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="147" selection-end-column="7" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#3389#4230#0" expanded="false" />
-            <element signature="e#4444#5756#0" expanded="false" />
-            <element signature="e#5931#6968#0" expanded="false" />
-            <element signature="e#7039#8721#0" expanded="false" />
-            <element signature="e#7295#7635#0" expanded="false" />
-            <element signature="e#7692#7703#0" expanded="false" />
-            <element signature="e#7747#8391#0" expanded="false" />
-            <element signature="e#8450#8490#0" expanded="false" />
-            <element signature="e#8810#10152#0" expanded="false" />
+            <element signature="e#3607#4448#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/han_config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/han_multi_clf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="980">
+          <caret line="329" column="6" lean-forward="false" selection-start-line="329" selection-start-column="6" selection-end-line="329" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -128,8 +128,8 @@ def process_data(path):
     reviews = []
     labels = []
     texts = []
-    for idx in range(data_train.review.shape[0]):
-    # for idx in range(100):
+    #for idx in range(data_train.review.shape[0]):
+    for idx in range(100):
     #     print('type data_train.review[idx]: ', type(data_train.review[idx]))
         raw_text = data_train.review[idx]
         if type(raw_text) == str and raw_text != '' and raw_text is not None:
@@ -168,7 +168,9 @@ def process_data(path):
                     if k < MAX_SENT_LENGTH and tokenizer.word_index[word] < MAX_NB_WORDS:
                         data[i, j, k] = tokenizer.word_index[word]
                         k = k + 1
-
+    '''
+    word_index: 单词词典，形如{'the': 1, 'a': 2, 'and': 3, 'of': 4}
+    '''
     word_index = tokenizer.word_index
     labels = to_categorical(np.asarray(labels))
     return data, labels, word_index
