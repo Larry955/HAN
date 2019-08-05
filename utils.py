@@ -40,27 +40,44 @@ class DataUtil:
 
 		tokenizer = Tokenizer(num_words=MAX_WORDS_PER_REVIEW)
 		tokenizer.fit_on_texts(reviews)
-
+		word_idx = tokenizer.word_index
 		data = np.zeros((len(reviews), MAX_NB_SENTS, MAX_WORDS_PER_SENT), dtype='int16')
 		for i, sents in enumerate(reviews_with_sents):
 			for j, sent in enumerate(sents):
 				if j < MAX_NB_SENTS:
-					word_tokens = text_word_sequence(sent)
+					word_tokens = text_to_word_sequence(sent)
 					k = 0
 					for _, word in enumerate(word_tokens):
-						if k < MAX_WORDS_PER_SENT and tokenizer.word_index[word] < MAX_WORDS_PER_REVIEW:
-							data[i, j, k] = tokenizer.word_index[word]
+						if k < MAX_WORDS_PER_SENT and word_idx[word] < MAX_WORDS_PER_REVIEW:
+							data[i, j, k] = word_idx[word]
 							k += 1
-		word_index = tokenizer.word_index
 		labels = to_categorical(np.asarray(labels))
-		return data, labels, word_index
+		return data, labels, word_idx
 
 		
 	# 将文档当成一个长序列处理，返回的数据类型是二维的
 	def get_doc_2d_data(self):
 		raw_data = pd.read_csv(self.file_path, sep='\t')
-		#for i in range(raw_data.review.shape[0]):
-			
+		reviews = []
+		labels = []
+		for i in range(raw_data.review.shape[0]):
+			review = raw_data.review[i]
+			review = self.__clean_text(review)
+			reviews.append(review)
+			labels.append(int(raw_data.sentiment[i]))
+		
+		tokenizer = Tokenizer(num_words=MAX_WORDS_PER_REVIEW)
+		tokenizer.fit_on_texts(reviews)
+		word_idx = tokenizer.word_index
+		data = np.zeros((len(review), MAX_WORDS_PER_REVIEW), dtype='int16')
+		for i, review in enumerate(reviews):
+			word_tokens = text_to_word_sequence(review)
+			for j, word in enumerate(word_tokens):
+				if j < MAX_WORDS_PER_REVIEW:
+					data[i, j] = word_idx[word]
+		labels = to_categorical(np.asarray(labels))
+		return data, labels, word_idx
+
 	
 	# 划分数据集，如果with_val为true，则将数据集划分为train/test/val
 	# 否则，划分为train/test
