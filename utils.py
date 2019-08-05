@@ -3,6 +3,7 @@ from sklearn.model_selection import train_test_split
 import re
 from nltk import sent_tokenize
 import os
+import numpy as np
 
 from keras.preprocessing.text import Tokenizer, text_to_word_sequence
 from keras.utils.np_utils import to_categorical
@@ -17,7 +18,7 @@ class DataUtil:
 		self.file_path = file_path
 		assert os.path.splitext(file_path)[1] == '.tsv'		# 文件后缀名为tsv
 	
-	def __clean_text__(self, text):
+	def __clean_text(self, text):
 		text = re.sub(r'[^@#$%^&*<>{}\\0-9]', '', text)
 		text = text.strip().lower()
 		return text
@@ -31,9 +32,9 @@ class DataUtil:
 		labels = []
 		for i in range(raw_data.review.shape[0]):
 			review = raw_data.review[i]
-			review = self.__clean_text__(review)
+			review = self.__clean_text(review)
 			reviews.append(review)
-			sents = sent_tokenize(reviews)
+			sents = sent_tokenize(review)
 			reviews_with_sents.append(sents)
 			labels.append(int(raw_data.sentiment[i]))
 
@@ -58,7 +59,7 @@ class DataUtil:
 	# 将文档当成一个长序列处理，返回的数据类型是二维的
 	def get_doc_2d_data(self):
 		raw_data = pd.read_csv(self.file_path, sep='\t')
-		for i in range(raw_data.review.shape[0]):
+		#for i in range(raw_data.review.shape[0]):
 			
 	
 	# 划分数据集，如果with_val为true，则将数据集划分为train/test/val
