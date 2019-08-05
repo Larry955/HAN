@@ -1,4 +1,5 @@
 # HAN
+
 This is an elegant implementation of HAN for Sentiment Classification Task.
 
 The original paper is [Hierarchical Attention Networks for Document Classification](https://www.cs.cmu.edu/~hovy/papers/16HLT-hierarchical-attention-networks.pdf)
